@@ -9,12 +9,15 @@ export const ecommerceApi = createApi({
             // get products
             getProducts: build.query({
                 query: () => `/products`
-            })
+            }),
+            getProductById: build.query({
+            query: (id) => `/products/${id}`
+        })
         }
     )
 })
 
 export const {
     useGetProductsQuery,
-    useGetProductByIdQueryD
+    useGetProductByIdQuery
 } = ecommerceApi;

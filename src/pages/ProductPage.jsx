@@ -50,10 +50,13 @@ export default function ProductPage() {
         <div className="grid container lg:grid-cols-4 p-8 gap-4">
             {
                 data?.products.map((pro,index)=>(
-                    <CardComponent key={index} image={pro?.image} 
+                    <a href={`detail/${pro.id}`}>
+                       <CardComponent key={index} image={pro?.image} 
                     model={pro.model}
                     description={pro.description}
                     />
+                    </a>
+                   
                 ))
             }
         </div>

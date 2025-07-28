@@ -14,6 +14,7 @@ import App from "./App";
 
 import { Provider } from 'react-redux'
 import { store } from "./redux/store";
+import DetailProductPage from "./pages/DetailProductPage";
 
 
 
@@ -30,6 +31,10 @@ const router = createBrowserRouter([
     path: "/product",
     element: <ProductPage />,
   },
+    {
+    path: "detail/:id",
+    element: <DetailProductPage/>,
+  },
   {
     path: "/auth",
     children: [
@@ -43,7 +48,7 @@ const router = createBrowserRouter([
       }
     ]
   },
-  
+
 ]);
 
 const root = document.getElementById("root");

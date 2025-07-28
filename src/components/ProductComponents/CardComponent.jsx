@@ -8,7 +8,7 @@ export function CardComponent({image, title, description}) {
       className="max-w-sm"
     //   renderImage={() => <Image width={500} height={500} src={image} alt="image 1" />}
     >
-        <img src={image} width={500} height={500} alt="image" />
+      <img src={image} width={500} height={500} alt="image" />
       <h5 className="text-2xl font-bold tracking-tight text-gray-900 dark:text-white">
        {title}
       </h5>
