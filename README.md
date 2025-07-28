@@ -13,6 +13,6 @@
 2. Deploy via
 
 ### 28/07/2025
-npm install zod
-npm install react-hook-form
-npm install @hookform/resolvers
+    npm install zod
+    npm install react-hook-form
+    npm install @hookform/resolvers
