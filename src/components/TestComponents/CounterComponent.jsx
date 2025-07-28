@@ -10,13 +10,14 @@ export default function CounterComponent() {
 
   return (
     <div>
-      <div>
+      <div className='flex justify-between items-center h-screen'>
          <button className='bg-transparent hover:bg-red-500 text-red-700 font-semibold hover:text-white py-2 px-4 border border-red-500 hover:border-transparent rounded mr-5'
           aria-label="Decrement value"
           onClick={() => dispatch(decrement())}
         >
           Decrement
         </button>
+         <span className='text-5xl'>{count}</span>
         <button className='bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded'
           aria-label="Increment value"
           onClick={() => dispatch(increment())}
@@ -25,7 +26,7 @@ export default function CounterComponent() {
         </button>
        
        
-         <span>{count}</span>
+        
       </div>
     </div>
   )
