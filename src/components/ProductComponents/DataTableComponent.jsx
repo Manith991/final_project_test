@@ -6,7 +6,7 @@ import { FiEdit, FiTrash2, FiEye } from 'react-icons/fi';
 const DataTableProduct = () => {
     const { data = [], isLoading, isError } = useGetProductsQuery({
         page: 1,
-        limit: 10
+        limit: 100
     });
 
     const columns = useMemo(() => [
@@ -115,6 +115,7 @@ const DataTableProduct = () => {
         },
         cells: {
             style: {
+                backgroundColor: "#818891",
                 paddingLeft: '1rem',
                 paddingRight: '1rem',
             },
@@ -142,9 +143,9 @@ const DataTableProduct = () => {
     }
 
     return (
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden">
+        <div className="bg-gray-900 rounded-lg shadow-sm border border-gray-200 overflow-hidden">
             <div className="p-4 border-b border-gray-200">
-                <h2 className="text-lg font-semibold text-gray-800">
+                <h2 className="text-lg font-semibold text-white">
                     Products Inventory
                 </h2>
                 <p className="text-sm text-gray-500">

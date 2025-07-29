@@ -76,7 +76,7 @@ import { useGetProductsQuery } from "../redux/api";
 export default function ProductPage() {
   const { data, isLoading, error } = useGetProductsQuery({
     page: 1,
-    limit: 8,
+    limit: 100,
   });
 
   if (isLoading) {
