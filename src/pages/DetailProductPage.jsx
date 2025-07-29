@@ -14,8 +14,12 @@ export default function DetailProductPage() {
         {/* Image gallery */}
         <div className="mx-auto mt-6 max-w-2xl sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:gap-8 lg:px-8">
           <img
-            alt={data?.product.title}
-            src={data?.product.image}
+          /** Use fakestoreapi */
+            // alt={data?.product.title}
+            // src={data?.product.image}
+            /**Use our api */
+            alt={data?.make}
+            src={data?.image}
             className="row-span-2 aspect-3/4 size-full rounded-lg object-cover max-lg:hidden"
           />
         </div>
@@ -24,7 +28,8 @@ export default function DetailProductPage() {
         <div className="mx-auto max-w-2xl px-4 pt-10 pb-16 sm:px-6 lg:grid lg:max-w-7xl lg:grid-cols-3 lg:grid-rows-[auto_auto_1fr] lg:gap-x-8 lg:px-8 lg:pt-16 lg:pb-24">
           <div className="lg:col-span-2 lg:border-r lg:border-gray-200 lg:pr-8">
             <h1 className="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
-              {data?.product.title}
+              {/* {data?.product.title} */}
+              {data?.make}
             </h1>
           </div>
 
@@ -32,7 +37,8 @@ export default function DetailProductPage() {
           <div className="mt-4 lg:row-span-3 lg:mt-0">
             <h2 className="sr-only">Product information</h2>
             <p className="text-3xl tracking-tight text-yellow-900">
-              {data?.product.price}$
+              {/* {data?.product.price}$ */}
+              {data?.price}$
             </p>
 
             <form className="mt-10">
@@ -65,7 +71,8 @@ export default function DetailProductPage() {
 
               <div className="space-y-6">
                 <p className="text-base text-gray-900">
-                  {data?.product.description}
+                  {/* {data?.product.description} */}
+                  {data?.description}
                 </p>
               </div>
             </div>

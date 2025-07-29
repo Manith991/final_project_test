@@ -2,8 +2,6 @@ import React from 'react'
 import { useSelector, useDispatch } from 'react-redux'
 import { decrement, increment } from '../../redux/feature/counter/counterSlice'
 
-
-
 export default function CounterComponent() {
   const count = useSelector(state => state.counter.value)
   const dispatch = useDispatch()
@@ -24,9 +22,6 @@ export default function CounterComponent() {
         >
           Increment
         </button>
-       
-       
-        
       </div>
     </div>
   )
