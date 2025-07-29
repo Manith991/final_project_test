@@ -31,6 +31,7 @@ export const ecommerceApi = createApi({
   baseQuery: fetchBaseQuery({
     baseUrl: "https://car-nextjs-api.cheatdev.online/",
   }),
+  tagTypes: ["cars"], 
   endpoints: (build) => ({
     // get products
     getProducts: build.query({
@@ -67,7 +68,7 @@ export const ecommerceApi = createApi({
         },
         body: updateCar,
       }),
-    
+      invalidatesTags: ["cars"]
     }),
     
      //delete product
@@ -81,6 +82,7 @@ export const ecommerceApi = createApi({
           'Authorization': `Bearer ${accessToken}`,
         },
       }),
+      invalidatesTags: ["cars"]
     }),
   }),
 });

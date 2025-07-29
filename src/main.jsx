@@ -1,8 +1,4 @@
-import {
-  createBrowserRouter,
-  RouterProvider,
-} from "react-router-dom"; // Fixed import
-
+import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import React from "react";
 import ReactDOM from "react-dom/client";
 import HomePage from "./pages/HomePage";
@@ -11,12 +7,9 @@ import { SignupComponent } from "./components/AuthComponents/SignupComponent";
 import ProductPage from "./pages/ProductPage";
 import AboutPage from "./pages/AboutPage"; // You'll need to create this
 import App from "./App";
-
-import { Provider } from 'react-redux'
+import { Provider } from "react-redux";
 import { store } from "./redux/store";
 import DetailProductPage from "./pages/DetailProductPage";
-
-
 
 const router = createBrowserRouter([
   {
@@ -31,9 +24,9 @@ const router = createBrowserRouter([
     path: "/product",
     element: <ProductPage />,
   },
-    {
+  {
     path: "detail/:id",
-    element: <DetailProductPage/>,
+    element: <DetailProductPage />,
   },
   {
     path: "/auth",
@@ -45,10 +38,9 @@ const router = createBrowserRouter([
       {
         path: "signup",
         element: <SignupComponent />,
-      }
-    ]
+      },
+    ],
   },
-
 ]);
 
 const root = document.getElementById("root");
@@ -56,8 +48,7 @@ const root = document.getElementById("root");
 ReactDOM.createRoot(root).render(
   <React.StrictMode>
     <Provider store={store}>
-        
-      <RouterProvider router={router} />    
+      <RouterProvider router={router} />
     </Provider>
   </React.StrictMode>
 );

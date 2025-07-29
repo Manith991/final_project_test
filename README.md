@@ -34,3 +34,15 @@ for schemaValidation(string().min(2,"Input make at least 2 letter")) we follow b
     https://ui.shadcn.com/docs/components/form
 ```
 
+### 29/07/2025
+### Today Lession DataTable
+go to website link to install:
+```
+    https://primereact.org/installation/
+    npm install primereact
+```
+We can use Flowbite React table or React table from
+```
+    https://react-data-table-component.netlify.app/?path=/docs/getting-started-examples--docs
+    npm install react-data-table-component
+```
